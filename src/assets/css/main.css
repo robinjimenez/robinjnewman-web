@@ -1,28 +1,51 @@
+@import "init.css";
+
 body {
+    margin: 0;
+    font-size: 62.5%;
     /* To test scrolling */
     height: 200vh;
+    background-color: var(--paper-color);
 }
+
+/* HEADER */
 
 .header {
     position: fixed;
     display: flex;
     align-items: flex-end;
     width: 100%;
+    font-size: 2em;
+    background-color: var(--paper-color);
+    padding: 0 var(--desktop-padding);
 }
 
 .header--state-expanded {
-    height: 20vh;
-    transition: height 0.5s ease-in-out;
+    height: 30vh;
+    padding-bottom: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: var(--paper-transparent);
+}
+
+/* Add space after names when expanded */
+.header--state-expanded .logo-part:not(:last-child)::after {
+    content: " ";
+    white-space: pre;
 }
 
 .header--state-collapsed {
-    height: 5vh;
-    padding-bottom: 5vh;
-    transition: height 0.5s ease-in-out;
+    height: 10vh;
+    padding-bottom: 3vh;
+    transition: all 0.5s ease-in-out;
+}
+
+#site-title {
+    text-transform: lowercase;
 }
 
 .hero {
     height: 50vh;
     display: flex;
     align-items: center;
+    padding: var(--desktop-padding);
 }

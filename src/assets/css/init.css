@@ -1,0 +1,9 @@
+:root {
+    --paper-color: rgba(243, 239, 232, 1);
+    --denim-color: rgba(61, 60, 84, 1);
+    --wool-color: rgba(128, 40, 20, 1);
+    --sand-color: rgba(237, 219, 193, 1);
+    --ink-color: rgba(37, 35, 32, 1);
+
+    --desktop-padding: 50px;
+}
