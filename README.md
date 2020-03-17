@@ -5,6 +5,4 @@
 
 Hi all! This is the code repository for my personal portfolio built with Gatsby and the Strapi headless CMS for content management.
 
-<p align="center">
-  Updating README 🤓
-</p>
+## Updating README 🤓
