@@ -1,0 +1,28 @@
+body {
+    /* To test scrolling */
+    height: 200vh;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.header--state-expanded {
+    height: 20vh;
+    transition: height 0.5s ease-in-out;
+}
+
+.header--state-collapsed {
+    height: 5vh;
+    padding-bottom: 5vh;
+    transition: height 0.5s ease-in-out;
+}
+
+.hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
