@@ -1,13 +1,28 @@
+/* TYPOGRAHPY */
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/fonts/ManropeGX.ttf") format('otf');
+}
+
+/* ROOT VARIABLES*/
+
 :root {
 
-    /* THEME COLOURS*/
-    --paper-color: rgba(243, 239, 232, 1);
-    --paper-transparent: rgba(243, 239, 232, 0);
-    --denim-color: rgba(61, 60, 84, 1);
-    --wool-color: rgba(128, 40, 20, 1);
-    --sand-color: rgba(237, 219, 193, 1);
-    --ink-color: rgba(37, 35, 32, 1);
+  /* THEME COLOURS*/
+  --paper-color: rgba(243, 239, 232, 1);
+  --paper-transparent: rgba(243, 239, 232, 0);
+  --denim-color: rgba(61, 60, 84, 1);
+  --wool-color: rgba(128, 40, 20, 1);
+  --sand-color: rgba(237, 219, 193, 1);
+  --ink-color: rgba(37, 35, 32, 1);
 
-    /* THEME COLOURS */
-    --desktop-padding: 50px;
+  /* THEME COLOURS */
+  --desktop-padding: 50px;
+
+  /* THEME FONTS */
+  --manrope-font: "Manrope", sans-serif;
+  --manrope-light: 300;
+  --manrope-regular: 400;
+  --manrope-extrabold: 800;
 }
