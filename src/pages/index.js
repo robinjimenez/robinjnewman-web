@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
+import Projects from "../components/Projects"
+
 
 import "../assets/css/main.css"
 
@@ -17,6 +19,7 @@ const IndexPage = ({ data }) => {
           {data.site.siteMetadata.subtitle.second_line}
         </h1>
       </Hero>
+      <Projects />
     </Layout>
   )
 }
