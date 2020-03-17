@@ -3,8 +3,6 @@
 body {
     margin: 0;
     font-size: 62.5%;
-    /* To test scrolling */
-    height: 200vh;
     background-color: var(--paper-color);
 }
 
@@ -36,16 +34,35 @@ body {
 .header--state-collapsed {
     height: 10vh;
     padding-bottom: 3vh;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-out;
 }
 
 #site-title {
     text-transform: lowercase;
 }
 
+/* SECTIONS */
+
+.section {
+    padding: var(--desktop-padding);
+}
+
+/* HERO */
+
 .hero {
     height: 50vh;
     display: flex;
     align-items: center;
-    padding: var(--desktop-padding);
+}
+
+/* PROJECTS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+.project-grid__item {
+    padding: 20px;
 }
