@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import { CSSTransition } from 'react-transition-group';
 
 import Logo from "./Logo"
 
@@ -16,11 +17,10 @@ class MovingHeader extends Component {
     window.removeEventListener("scroll", this._handleScroll)
   }
 
-  _handleScroll = e => {
-    if (
-      (this.state.collapsed && window.scrollY <= 10) ||
-      (!this.state.collapsed && window.scrollY >= 10)
-    ) {
+  _handleScroll = (e) => {
+    if (this.state.collapsed && window.scrollY <= 5) {
+      this.setState({ collapsed: !this.state.collapsed })
+    } else if (!this.state.collapsed && window.scrollY >= 5) {
       this.setState({ collapsed: !this.state.collapsed })
     }
   }
@@ -36,9 +36,15 @@ class MovingHeader extends Component {
         }`}
       >
         <p className="header__logo">
-          {!this.state.collapsed && (
-            <span className="header__pre-logo">Hi! I'm </span>
-          )}
+          <CSSTransition
+            in={!this.state.collapsed}
+            appear={true}
+            timeout={5000}
+            classNames="header__pre-logo-"
+            unmountOnExit={true}
+          >
+              <span className="header__pre-logo">Hi! I'm </span>
+          </CSSTransition>
           <Link id="site-title" to="/">
             <Logo
               firstName={fullName[0]}

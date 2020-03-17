@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Transition } from "react-transition-group"
 
 class Logo extends Component {
   constructor(props) {
@@ -12,8 +13,6 @@ class Logo extends Component {
   }
 
   componentDidUpdate = prevProps => {
-
-    // 
     if (!prevProps.collapsed && this.props.collapsed) {
       const surnameInitial = this.state.firstSurname.charAt(0)
       this.setState({
@@ -36,7 +35,7 @@ class Logo extends Component {
       </span>,
       <span key="second-surname" className="logo-part second-surname">
         {this.state.secondSurname}
-      </span>,
+      </span>
     ]
   }
 }

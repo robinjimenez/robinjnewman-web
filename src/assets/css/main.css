@@ -24,20 +24,23 @@ body {
 .header--state-expanded {
   height: 30vh;
   padding-bottom: 0;
-  transition: all 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out 0.5s, backgroundColor 0.5s ease-in-out;
   background-color: var(--paper-transparent);
 }
 
 /* Add space after names when expanded */
-.header--state-expanded .logo-part:not(:last-child)::after {
-  content: " ";
-  white-space: pre;
+.header--state-expanded .logo-part:not(:last-child) {
+  margin-right: 0.25em;
 }
 
 .header--state-collapsed {
   height: 10vh;
   padding-bottom: 3vh;
   transition: all 0.5s ease-out;
+}
+
+.header--state-collapsed .logo-part:not(:last-child) {
+  margin-right: 0;
 }
 
 #site-title {
@@ -47,31 +50,53 @@ body {
 }
 
 .logo-part {
-    transition: font-weight 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  margin-right: 0;
 }
 
 .header--state-expanded .first-name {
-    font-weight: var(--manrope-extrabold);
+  font-weight: var(--manrope-extrabold);
 }
 
 .header--state-expanded .first-surname {
-    font-weight: var(--manrope-extrabold);
+  font-weight: var(--manrope-extrabold);
 }
 
 .header--state-expanded .second-surname {
-    font-weight: var(--manrope-extrabold);
+  font-weight: var(--manrope-extrabold);
 }
 
 .header--state-collapsed .first-name {
-    font-weight: var(--manrope-extrabold);
+  font-weight: var(--manrope-extrabold);
 }
 
 .header--state-collapsed .first-surname {
-    font-weight: var(--manrope-normal);
+  font-weight: var(--manrope-regular);
 }
 
 .header--state-collapsed .second-surname {
-    font-weight: var(--manrope-light);
+  font-weight: var(--manrope-light);
+}
+
+.header__pre-logo--exit {
+  margin-left: 0;
+}
+
+.header__pre-logo--exit-active {
+  margin-left: -3em;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out, margin 500ms ease-in-out 0.5s;
+}
+
+.header__pre-logo--enter {
+  margin-left: -3em;
+  opacity: 0;
+}
+
+.header__pre-logo--enter-active {
+  margin-left: 0;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out, margin 500ms ease-in-out;
 }
 
 /* SECTIONS */
@@ -84,6 +109,20 @@ body {
   font-family: var(--bagnard-font);
   font-size: 3em;
 }
+
+.section--bordered {
+    padding: calc(var(--desktop-padding)/4);
+    margin: var(--desktop-padding) calc(var(--desktop-padding)/4);
+    border: var(--ink-color) 2px solid;
+}
+
+.section--bordered .section__title {
+    margin: -1em 0;
+    background-color: var(--paper-color);
+    padding: 0 1em;
+    float: left;
+}
+
 /* HERO */
 
 .hero {
@@ -94,17 +133,18 @@ body {
 
 .subtitle {
   font-size: 2em;
-  font-weight: var(--manrope-normal);
+  font-weight: var(--manrope-regular);
 }
 
 /* PROJECTS */
 
-.project-grid {
+.projects__grid {
   display: grid;
+  clear: both;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
 }
 
-.project-grid__item {
+.projects__grid_card {
   padding: 20px;
 }
