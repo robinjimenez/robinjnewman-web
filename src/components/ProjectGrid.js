@@ -11,11 +11,11 @@ class ProjectGrid extends Component {
   render() {
     const { projects } = this.props
     return (
-      <div className="project-grid">
+      <div className="projects__grid">
         {projects.map(project => {
 
           return (
-            <div key={project.id} className="project-grid__item">
+            <div key={project.id} className="projects__grid-card">
               <Project
                 title={project.Title}
                 subtitle={project.Subtitle}

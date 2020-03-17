@@ -18,8 +18,8 @@ const Projects = () => {
   `)
 
   return (
-    <section className="section projects">
-      <h2 className="projects__title">Projects</h2>
+    <section className="section section--bordered projects">
+      <h2 className="section__title">Projects</h2>
       <ProjectGrid projects={data.allStrapiProject.nodes}></ProjectGrid>
     </section>
   )
