@@ -1,6 +1,6 @@
-import React from "react"  
-import PropTypes from "prop-types"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 import SEO from "./Seo"
 import MovingHeader from "./MovingHeader"

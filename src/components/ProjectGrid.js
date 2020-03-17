@@ -13,7 +13,6 @@ class ProjectGrid extends Component {
     return (
       <div className="project-grid">
         {projects.map(project => {
-          console.log(project)
 
           return (
             <div key={project.id} className="project-grid__item">

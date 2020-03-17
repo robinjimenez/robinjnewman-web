@@ -1,68 +1,106 @@
 @import "init.css";
 
 body {
-    margin: 0;
-    font-size: 62.5%;
-    background-color: var(--paper-color);
+  margin: 0;
+  height: 200vh;
+  font-size: 62.5%;
+  background-color: var(--paper-color);
+  font-family: var(--manrope-font);
+  color: var(--ink-color);
 }
 
 /* HEADER */
 
 .header {
-    position: fixed;
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    font-size: 2em;
-    background-color: var(--paper-color);
-    padding: 0 var(--desktop-padding);
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  font-size: 2em;
+  background-color: var(--paper-color);
+  padding: 0 var(--desktop-padding);
 }
 
 .header--state-expanded {
-    height: 30vh;
-    padding-bottom: 0;
-    transition: all 0.5s ease-in-out;
-    background-color: var(--paper-transparent);
+  height: 30vh;
+  padding-bottom: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--paper-transparent);
 }
 
 /* Add space after names when expanded */
 .header--state-expanded .logo-part:not(:last-child)::after {
-    content: " ";
-    white-space: pre;
+  content: " ";
+  white-space: pre;
 }
 
 .header--state-collapsed {
-    height: 10vh;
-    padding-bottom: 3vh;
-    transition: all 0.5s ease-out;
+  height: 10vh;
+  padding-bottom: 3vh;
+  transition: all 0.5s ease-out;
 }
 
 #site-title {
-    text-transform: lowercase;
+  color: var(--ink-color);
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+.logo-part {
+    transition: font-weight 0.8s ease-in-out;
+}
+
+.header--state-expanded .first-name {
+    font-weight: var(--manrope-extrabold);
+}
+
+.header--state-expanded .first-surname {
+    font-weight: var(--manrope-extrabold);
+}
+
+.header--state-expanded .second-surname {
+    font-weight: var(--manrope-extrabold);
+}
+
+.header--state-collapsed .first-name {
+    font-weight: var(--manrope-extrabold);
+}
+
+.header--state-collapsed .first-surname {
+    font-weight: var(--manrope-normal);
+}
+
+.header--state-collapsed .second-surname {
+    font-weight: var(--manrope-light);
 }
 
 /* SECTIONS */
 
 .section {
-    padding: var(--desktop-padding);
+  padding: var(--desktop-padding);
 }
 
 /* HERO */
 
 .hero {
-    height: 50vh;
-    display: flex;
-    align-items: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 2em;
+  font-weight: var(--manrope-normal);
 }
 
 /* PROJECTS */
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
 }
 
 .project-grid__item {
-    padding: 20px;
+  padding: 20px;
 }

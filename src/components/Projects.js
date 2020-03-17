@@ -17,8 +17,6 @@ const Projects = () => {
     }
   `)
 
-  console.log(data.allStrapiProject.nodes)
-
   return (
     <section className="section projects">
       <h2 className="projects__title">Projects</h2>
