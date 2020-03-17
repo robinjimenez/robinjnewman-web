@@ -80,6 +80,10 @@ body {
   padding: var(--desktop-padding);
 }
 
+.section__title {
+  font-family: var(--bagnard-font);
+  font-size: 3em;
+}
 /* HERO */
 
 .hero {
