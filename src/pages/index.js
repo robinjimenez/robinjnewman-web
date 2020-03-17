@@ -7,7 +7,6 @@ import Hero from "../components/Hero"
 import "../assets/css/main.css"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
 
   return (
     <Layout>
