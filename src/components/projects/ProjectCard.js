@@ -6,8 +6,6 @@ const Label = ({ className, children }) => {
 }
 
 export const ProjectCard = ({ id, title, subtitle, year, cover }) => {
-  console.log(cover)
-
   return [
     <div key={`${id}-summary`} className="project-card__summary">
       <div className="project-card__summary-top">
@@ -23,12 +21,12 @@ export const ProjectCard = ({ id, title, subtitle, year, cover }) => {
       </div>
     </div>,
     <Img
-    key={`${id}-image`}
-    className="project-card__thumb"
-    fluid={cover.childImageSharp.fluid}
-    alt={`${title} card cover`}
-    style={{position: 'absolute'}}
-  />
+      key={`${id}-image`}
+      className="project-card__thumb"
+      fluid={cover.childImageSharp.fluid}
+      alt={`${title} card cover`}
+      style={{ position: "absolute" }}
+    />,
   ]
 }
 

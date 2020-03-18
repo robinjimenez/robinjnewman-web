@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  height: 200vh;
   font-size: 62.5%;
   background-color: var(--paper-color);
   font-family: var(--manrope-font);
@@ -142,9 +141,9 @@ body {
 }
 
 .section--bordered .section__title {
-  margin: calc(var(--mobile-padding) * -3.3) 0;
+  margin: calc(var(--mobile-padding) * -3.3) 0.25em;
   background-color: var(--paper-color);
-  padding: 0 1em;
+  padding: 0 0.5em;
   float: left;
 }
 
@@ -164,14 +163,14 @@ body {
 /* PROJECTS */
 
 .projects {
-  padding: calc(var(--mobile-padding) * 2) 0 var(--mobile-padding);
+  padding: calc(var(--mobile-padding) * 2) calc(var(--mobile-padding) / 2) var(--mobile-padding);
 }
 
 .projects__grid {
   display: grid;
   clear: both;
   grid-gap: 1em;
-  grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
   grid-auto-rows: minmax(100px, auto);
 }
 
@@ -213,44 +212,44 @@ body {
 }
 
 .project-card__summary {
-    z-index: 5;
+  z-index: 5;
 }
 
 .project-card__thumb {
-    /* position: absolute in component*/
-    top: 0;
-    left: 0;
-    z-index: -5;
-    width: 100%;
-    height: 100%;
+  /* position: absolute in component*/
+  top: 0;
+  left: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
 }
 
 .project-card__summary-top {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2em;
-  }
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2em;
+}
 
 .label-trans {
-    color: var(--paper-color);
-    font-weight: var(--manrope-extrabold);
-    mix-blend-mode: overlay;
+  color: var(--paper-color);
+  font-weight: var(--manrope-extrabold);
+  mix-blend-mode: overlay;
 }
 
 .project-card__title {
-    margin-top: 3em;
+  margin-top: 3em;
   font-size: 1.8em;
 }
 
 .project-card__subtitle-container {
-    display: flex;
-  }
+  display: flex;
+}
 
 .project-card__presubtitle-line {
-    flex-grow: 1;
-    height: 0.75em;
-    margin-right: 0.5em;
-    border-bottom: 1px var(--ink-color) solid;
+  flex-grow: 1;
+  height: 0.75em;
+  margin-right: 0.5em;
+  border-bottom: 1px var(--ink-color) solid;
 }
 
 .project-card__subtitle {
@@ -297,6 +296,7 @@ body {
 
   .section--bordered .section__title {
     margin: calc(var(--desktop-padding) * -0.9) 0;
+    padding: 0 1em;
   }
 
   .projects__grid-item:hover .projects__grid-card {

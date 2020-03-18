@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Transition } from "react-transition-group"
 
 // TODO: Implement letter by letter collapse and expansion
 

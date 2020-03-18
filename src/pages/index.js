@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
-import Projects from "../components/Projects"
+import Projects from "../components/projects/Projects"
 
 
 import "../assets/css/main.css"
