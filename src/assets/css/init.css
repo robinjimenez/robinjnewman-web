@@ -34,8 +34,9 @@
 
   /* PADDINGS */
 
-  --desktop-padding: 50px;
-
+  --mobile-padding: 5%;
+  --desktop-padding: 10%;
+ 
   /* RESPONSIVE BREAKPOINTS */
 
   --small-bp: 320px;
