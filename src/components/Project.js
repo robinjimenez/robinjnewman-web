@@ -3,7 +3,7 @@ import React from "react"
 export const Project = ({title,subtitle,year}) => {
 
     return (
-      <div className="project">
+      <div className="project__summary">
         <p className="project__year">{year}</p>
         <h2 className="project__title">{title}</h2>
         <h3 className="project__subtitle">{subtitle}</h3>
