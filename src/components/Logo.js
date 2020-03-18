@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { Transition } from "react-transition-group"
 
+// TODO: Implement letter by letter collapse and expansion
+
 class Logo extends Component {
   constructor(props) {
     super(props)
@@ -12,7 +14,7 @@ class Logo extends Component {
     }
   }
 
-  componentDidUpdate = prevProps => {
+  /*componentDidUpdate = prevProps => {
     if (!prevProps.collapsed && this.props.collapsed) {
       const surnameInitial = this.state.firstSurname.charAt(0)
       this.setState({
@@ -23,7 +25,7 @@ class Logo extends Component {
         firstSurname: this.props.firstSurname,
       })
     }
-  }
+  }*/
 
   render() {
     return [

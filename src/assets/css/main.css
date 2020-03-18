@@ -34,9 +34,10 @@ body {
 }
 
 .header--state-collapsed {
-  height: 10vh;
-  padding-bottom: 3vh;
-  transition: all 0.5s ease-out;
+  height: 3.5em;
+  transition: all 0.5s ease-in-out, border 0.5s ease-in-out 0.5s;
+  border-bottom: var(--ink-color) 2px solid;
+  margin-bottom: 0;
 }
 
 .header--state-collapsed .logo-part:not(:last-child) {
@@ -49,6 +50,10 @@ body {
   text-decoration: none;
 }
 
+.header__logo  {
+  transition: all 0.5 ease-in-out;
+}
+
 .logo-part {
   transition: all 0.8s ease-in-out;
   margin-right: 0;
@@ -59,11 +64,20 @@ body {
 }
 
 .header--state-expanded .first-surname {
+  width: 3.9em; /* TODO: Normalize */
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
   font-weight: var(--manrope-extrabold);
+  transition: all 0.8s ease-in-out;
 }
 
 .header--state-expanded .second-surname {
   font-weight: var(--manrope-extrabold);
+}
+
+.header--state-expanded .header__logo {
+  margin-bottom: 0;
 }
 
 .header--state-collapsed .first-name {
@@ -71,11 +85,20 @@ body {
 }
 
 .header--state-collapsed .first-surname {
+  width: 0.3em; /* TODO: Normalize */
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
   font-weight: var(--manrope-regular);
+  transition: all 0.8s ease-in-out;
 }
 
 .header--state-collapsed .second-surname {
   font-weight: var(--manrope-light);
+}
+
+.header--state-collapsed .header__logo {
+  margin-block-end: 1em;
 }
 
 .header__pre-logo--exit {
