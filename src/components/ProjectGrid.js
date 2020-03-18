@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 
-import Project from "./project"
+import ProjectCard from "./ProjectCard"
 
 class ProjectGrid extends Component {
   static propTypes = {
@@ -16,10 +16,12 @@ class ProjectGrid extends Component {
           return (
             <div key={project.id} className="projects__grid-item">
               <div className="projects__grid-card">
-                <Project
+                <ProjectCard
+                  id={project.id}
                   title={project.Title}
                   subtitle={project.Subtitle}
                   year={project.Year}
+                  cover={project.Cover}
                 />
               </div>
               <div className="projects__grid-card-shadow"></div>

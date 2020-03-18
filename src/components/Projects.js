@@ -9,9 +9,16 @@ const Projects = () => {
       allStrapiProject {
         nodes {
           id
-          Subtitle
           Year
           Title
+          Subtitle
+          Cover {
+            childImageSharp {
+              fluid(fit: COVER) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
