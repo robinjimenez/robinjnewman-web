@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Projects from "../components/projects/Projects"
 
+import AboutContainer from "../components/about/AboutContainer"
 
 import "../assets/css/main.css"
 
@@ -20,6 +21,7 @@ const IndexPage = ({ data }) => {
         </h1>
       </Hero>
       <Projects />
+      <AboutContainer />
     </Layout>
   )
 }

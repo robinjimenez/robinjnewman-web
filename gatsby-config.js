@@ -26,7 +26,18 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
         queryLimit: 1000, // Default to 100
-        contentTypes: [`project`, `category`, `tag`, `user`],
+        contentTypes: [
+          `project`,
+          `category`,
+          `tag`,
+          `skill`,
+          `about`,
+          `skill-type`,
+          `language`,
+          `experience`,
+          `education`,
+          `user`
+        ],
       },
     },
     `gatsby-transformer-sharp`,
