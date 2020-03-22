@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Projects from "../components/projects/Projects"
-
+import ContactContainer from "../components/contact/ContactContainer"
 import AboutContainer from "../components/about/AboutContainer"
 
 import "../assets/css/main.css"
@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => {
       </Hero>
       <Projects />
       <AboutContainer />
+      <ContactContainer />
     </Layout>
   )
 }
