@@ -6,7 +6,7 @@ import ProjectGrid from "./ProjectGrid"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query projects {
-      allStrapiProject {
+      allStrapiProject(sort: {order: DESC, fields: Year}) {
         nodes {
           id
           Year
