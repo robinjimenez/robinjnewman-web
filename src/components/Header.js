@@ -4,12 +4,13 @@ import { CSSTransition } from 'react-transition-group';
 
 import Logo from "./Logo"
 
-class MovingHeader extends Component {
+class Header extends Component {
   state = {
     collapsed: false,
   }
 
   componentDidMount() {
+    this._handleScroll();
     window.addEventListener("scroll", this._handleScroll)
   }
 
@@ -59,4 +60,4 @@ class MovingHeader extends Component {
   }
 }
 
-export default MovingHeader
+export default Header

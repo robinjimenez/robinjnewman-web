@@ -3,7 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
 import SEO from "./Seo"
-import MovingHeader from "./MovingHeader"
+import Header from "./Header"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => { 
   
@@ -20,8 +21,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <SEO title={data.site.siteMetadata.title} />
-      <MovingHeader name="Robin Jiménez Newman"></MovingHeader>
+      <Header name="Robin Jiménez Newman" />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
