@@ -125,7 +125,7 @@ body {
 /* SECTIONS */
 
 .section {
-  padding: var(--mobile-padding);
+  padding: var(--mobile-padding) calc(var(--mobile-padding)*1.5);
 }
 
 .section__title {
@@ -136,7 +136,7 @@ body {
 .section--bordered {
   padding: calc(var(--mobile-padding) * 2) var(--mobile-padding)
     var(--mobile-padding);
-  margin: var(--mobile-padding) calc(var(--mobile-padding) / 2);
+  margin: calc(var(--mobile-padding) * 2) calc(var(--mobile-padding) / 2);
   border: var(--ink-color) 2px solid;
 }
 
@@ -274,6 +274,22 @@ body {
   font-size: 1.2em;
   font-weight: var(--manrope-regular);
   margin: 0;
+}
+
+/* ABOUT */
+
+.about {
+  background-color: var(--sand-color);
+
+}
+
+.about__intro {
+  font-size: 1.6em;
+}
+
+.about-section__title {
+  font-family: var(--bagnard-font);
+  font-size: 2em;
 }
 
 /* FOOTER */
