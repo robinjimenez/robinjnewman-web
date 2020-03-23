@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import SkillTypeContainer from './SkillTypeContainer'
 
 const About = ({ intro, skills, languages, experience, education }) => {
   return (
@@ -13,6 +14,7 @@ const About = ({ intro, skills, languages, experience, education }) => {
       </section>
       <section className="about__skills-section">
         <h3 className="about-section__title">Hard Skills</h3>
+          {skills.map(type => <SkillTypeContainer key={type.id} title={type.Name} skillType={type} />)}
       </section>
       <section className="about__experience-section">
         <h3 className="about-section__title">Experience</h3>
