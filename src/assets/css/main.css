@@ -147,6 +147,63 @@ body {
   float: left;
 }
 
+/* UI ELEMENTS */
+
+.collapsible-group {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: 1px var(--ink-color) solid;
+}
+
+.collapsible-item__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em 0.5em 2em;
+  align-items: center;
+  position: relative;
+}
+
+.collapsible-group__item:not(:last-child) .collapsible-item__header {
+  border-bottom: 1px var(--ink-color) solid;
+}
+
+.collapsible-group__item--expanded:last-child .collapsible-item__header {
+  border-bottom: 1px var(--ink-color) solid;
+}
+
+.collapsible-group__item--expanded:not(:last-child) {
+  border-bottom: 1px var(--ink-color) solid;
+}
+
+.collapsible-item__title {
+  font-size: 1.6em;
+  display: inline;
+  margin: 0.5em 0;
+}
+
+.collapsible-item__toggle {
+  font-size: 2em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  right: 1em;
+  color: var(--paper-color);
+  border: 1px var(--ink-color) solid;
+  transition: all 0.5s ease-in-out;
+}
+
+.collapsible-item__toggle--expand {
+  background-color: var(--denim-color);
+  top: 0.5em;
+}
+
+.collapsible-item__toggle--collapse {
+  background-color: var(--wool-color);
+  top: 1.5em;
+}
+
 /* HERO */
 
 .hero {
