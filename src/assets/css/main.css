@@ -349,6 +349,32 @@ body {
   font-size: 2em;
 }
 
+.skill-type__block {
+  padding-left: 3em;
+}
+
+.skill-item {
+  list-style: none;
+}
+
+.skill-item__name {
+  font-size: 1.4em;
+  white-space: pre;
+}
+
+.skill-item:not(:first-child) .skill-item__name {
+  margin-block-start: 1em;
+}
+
+.skill-item:not(:last-child) .skill-item__name {
+  margin-block-end: 0.5em;
+}
+
+.skill-item__description {
+  font-size: 1.2em;
+  margin-left: 3em;
+}
+
 /* FOOTER */
 
 .footer__message {

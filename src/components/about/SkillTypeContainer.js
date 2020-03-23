@@ -2,22 +2,20 @@ import React from "react"
 
 const Skill = ({ skill }) => {
   return (
-    <li className={skill.Name}>
-      <h5>{skill.Name}</h5>
-      <p>{skill.Description}</p>
+    <li className="skill-item">
+      <h5 className="skill-item__name">->   {skill.Name}</h5>
+      {skill.Description && <p className="skill-item__description">{skill.Description}</p>}
     </li>
   )
 }
 
 const SkillTypeContainer = ({ skillType }) => {
   return (
-    <div className="skill-type__block">
-      <ul>
+    <ul className="skill-type__block">
         {skillType.skills.map(skill => {
           return <Skill key={skill.Name} skill={skill} />
         })}
-      </ul>
-    </div>
+    </ul>
   )
 }
 
