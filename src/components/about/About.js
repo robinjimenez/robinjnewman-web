@@ -6,15 +6,20 @@ const About = ({ intro, skills, languages, experience, education }) => {
   return (
     <div className="about-layout">
       <section className="about__intro-section">
-        <p
+        <div
           className="about__intro"
           dangerouslySetInnerHTML={{ __html: intro }}
-        ></p>
+        />
       </section>
       <section className="about__skills-section">
+        <h3 className="about-section__title">Hard Skills</h3>
       </section>
-      <section className="about__experience-section"></section>
-      <section className="about__education-section"></section>
+      <section className="about__experience-section">
+        <h3 className="about-section__title">Experience</h3>
+      </section>
+      <section className="about__education-section">
+        <h3 className="about-section__title">Education</h3>
+      </section>
     </div>
   )
 }

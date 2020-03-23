@@ -7,7 +7,7 @@ const AboutContainer = () => {
   const data = useStaticQuery(graphql`
     query aboutQuery {
       strapiAbout {
-        Subtitle
+        Introduction
       }
       allStrapiExperience {
         nodes {
@@ -34,6 +34,7 @@ const AboutContainer = () => {
       }
       allStrapiSkillType {
         nodes {
+          id
           Name
           skills {
             Description
@@ -51,10 +52,10 @@ const AboutContainer = () => {
   `)
 
   return (
-    <section className="section section--bordered about">
+    <section className="section about">
       <h2 className="section__title">About me</h2>
       <About
-        intro={data.strapiAbout.Subtitle}
+        intro={data.strapiAbout.Introduction}
         skills={data.allStrapiSkillType.nodes}
         languages={data.allStrapiLanguage.nodes}
         experience={data.allStrapiExperience.nodes}
