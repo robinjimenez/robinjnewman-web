@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { CSSTransition } from 'react-transition-group';
 
 class CollapsibleItem extends Component {
   state = {
@@ -28,9 +29,14 @@ class CollapsibleItem extends Component {
             {this.state.isCollapsed ? "+" : "-"}
           </button>
         </div>
-        {!this.state.isCollapsed && (
-          <div className="collapsible-item__content">{content}</div>
-        )}
+        <CSSTransition
+            in={!this.state.isCollapsed}
+            appear
+            timeout={0}
+            classNames="collapsible-item__content-"
+          >
+              <div className="collapsible-item__content">{content}</div>
+          </CSSTransition>
       </div>
     )
   }

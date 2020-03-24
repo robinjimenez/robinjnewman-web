@@ -162,6 +162,8 @@ body {
   padding: 0.5em 1em 0.5em 2em;
   align-items: center;
   position: relative;
+  flex: none;
+  transition: bottom 0.09s ease-in;
 }
 
 .collapsible-group__item:not(:last-child) .collapsible-item__header {
@@ -172,14 +174,49 @@ body {
   border-bottom: 1px var(--ink-color) solid;
 }
 
+.collapsible-group__item--collapsed:last-child .collapsible-item__header {
+  border-bottom: 0px var(--ink-color) solid;
+  transition: border 0s ease-in-out 0.5s;
+}
+
 .collapsible-group__item--expanded:not(:last-child) {
   border-bottom: 1px var(--ink-color) solid;
+}
+
+.collapsible-group__item--collapsed {
+  border-bottom: 0px var(--ink-color) solid;
+  transition: border 0s ease-in-out 0.5s;
+}
+
+.collapsible-group__item--collapsed .collapsible-item__header:before {
+  content: "";
+  position: absolute;
+  background: var(--paper-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 0;
+  transition: bottom 0.09s ease-in;
+}
+
+.collapsible-group__item--expanded .collapsible-item__header:before {
+  content: "";
+  position: absolute;
+  background: var(--paper-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  bottom: 0%;
+  transition: bottom 0.09s ease-in;
 }
 
 .collapsible-item__title {
   font-size: 1.6em;
   display: inline;
   margin: 0.5em 0;
+  z-index: 1;
 }
 
 .collapsible-item__toggle {
@@ -192,6 +229,12 @@ body {
   color: var(--paper-color);
   border: 1px var(--ink-color) solid;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.collapsible-item__toggle:focus {
+  outline: none;
 }
 
 .collapsible-item__toggle--expand {
@@ -201,7 +244,21 @@ body {
 
 .collapsible-item__toggle--collapse {
   background-color: var(--wool-color);
-  top: 1.5em;
+  top: 1.55em;
+}
+
+.collapsible-item__content {
+  overflow: hidden;
+  max-height: 0em;
+  transition: max-height 500ms ease-in-out;
+}
+
+.collapsible-item__content--enter-done {
+  max-height: 100em;
+}
+
+.collapsible-item__content--exit-done {
+  max-height: 0em;
 }
 
 /* HERO */
@@ -337,7 +394,6 @@ body {
 
 .about {
   background-color: var(--sand-color);
-
 }
 
 .about__intro {
@@ -350,10 +406,12 @@ body {
 }
 
 .skill-type__block {
-  padding-left: 3em;
+  padding-inline-start: 3em;
+  padding-inline-end: 2em;
 }
 
 .skill-item {
+  margin-top: 1em;
   list-style: none;
 }
 
@@ -362,17 +420,15 @@ body {
   white-space: pre;
 }
 
-.skill-item:not(:first-child) .skill-item__name {
-  margin-block-start: 1em;
-}
-
-.skill-item:not(:last-child) .skill-item__name {
+.skill-item .skill-item__name {
+  margin-block-start: 0;
   margin-block-end: 0.5em;
 }
 
 .skill-item__description {
   font-size: 1.2em;
-  margin-left: 3em;
+  margin-inline-start: 3em;
+  margin-block-start: 0em;
 }
 
 /* FOOTER */
