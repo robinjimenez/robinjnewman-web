@@ -571,6 +571,8 @@ body {
 
 .contact__form {
   font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
 }
 
 .name-label, .email-label, .message-label {
@@ -607,13 +609,20 @@ body {
 }
 
 .message-input  {
-  padding: 0.25em;
+  padding: 0.5em;
   height: 7em;
   border: 1px var(--ink-color) solid;
+  max-width: 100%;
+  resize: none;
 }
 
 input, textarea {
   outline: none;
+}
+
+.contact__submit {
+  align-self: flex-end;
+  margin: 2em 0 0;
 }
 
 /* FOOTER */
