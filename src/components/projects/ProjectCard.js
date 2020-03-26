@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 
 const Label = ({ className, children }) => {
-  return <div className={`${className} label label-trans`}>{children}</div>
+  return <div className={`${className} label label--trans`}>{children}</div>
 }
 
 export const ProjectCard = ({ id, title, subtitle, year, cover }) => {
