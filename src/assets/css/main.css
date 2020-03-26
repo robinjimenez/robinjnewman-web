@@ -136,7 +136,7 @@ body {
 .section--bordered {
   padding: calc(var(--mobile-padding) * 2) var(--mobile-padding)
     var(--mobile-padding);
-  margin: calc(var(--mobile-padding) * 2) calc(var(--mobile-padding) / 2);
+  margin: calc(var(--mobile-padding) * 3) calc(var(--mobile-padding) / 2);
   border: var(--ink-color) 2px solid;
 }
 
@@ -148,7 +148,7 @@ body {
 }
 
 /* UI ELEMENTS */
-
+/* -- COLLAPSIBLE GROUP  --*/
 .collapsible-group {
   display: flex;
   flex-direction: column;
@@ -268,6 +268,53 @@ body {
   max-height: 0em;
 }
 
+/* -- BUTTONS  --*/
+.primary-button {
+  -webkit-appearance: none;
+  background: none;
+  border: 1px var(--denim-color) solid;
+  padding: 0;
+  font-size: 1em;
+  font-family: var(--manrope-font);
+  position: relative;
+  cursor: pointer;
+}
+
+.primary-button__content {
+  -webkit-appearance: none;
+  background-color: var(--denim-color);
+  border: 1px var(--denim-color) solid;
+  color: var(--paper-color);
+  padding: 0.25em 1em;
+  position: relative;
+  left: -0.5em;
+  top: -0.5em;
+  transition: all 0.5s ease-in-out;
+}
+
+.primary-button__content:hover {
+  left: 0;
+  top: 0;
+}
+
+/* -- LABELS  --*/
+
+.label {
+  background-color: var(--denim-color);
+  color: var(--paper-color);
+  padding: 0.25em 0.5em;
+  display: inline-block;
+}
+
+.label--trans {
+  background: none;
+  color: var(--ink-color);
+  padding: 0;
+  font-weight: var(--manrope-extrabold);
+  mix-blend-mode: darken;
+  opacity: 0.5;
+}
+
 /* HERO */
 
 .hero {
@@ -368,12 +415,7 @@ body {
   font-size: 2em;
 }
 
-.label-trans {
-  color: var(--ink-color);
-  font-weight: var(--manrope-extrabold);
-  mix-blend-mode: darken;
-  opacity: 0.5;
-}
+
 
 .project-card__title {
   margin-top: 3em;
@@ -405,13 +447,17 @@ body {
   background-color: var(--sand-color);
 }
 
-.about__intro {
+.about-section {
+  margin-bottom: 3em;
+}
+
+.about-section--intro {
   font-size: 1.6em;
 }
 
 .about-section__title {
   font-family: var(--bagnard-font);
-  font-size: 2em;
+  font-size: 2.4em;
 }
 
 .skill-type__block {
@@ -439,6 +485,87 @@ body {
   margin-inline-start: 3em;
   margin-block-start: 0em;
 }
+
+.job__item {
+  margin: 1em;
+  padding: 1.5em;
+  position: relative;
+  border: 1px solid var(--denim-color);
+}
+
+.job__period {
+  font-size: 1.6em;
+  position: absolute;
+  top: -0.7em;
+  left: -0.7em;
+}
+
+.job__title {
+  font-size: 1.6em;
+  margin-block-start: 1em;
+  margin-block-end: 0em;
+}
+
+.job__company {
+  font-size: 1.4em;
+  margin-block-start: 0em;
+  margin-block-end: 0.5em;
+}
+
+.job__description {
+  font-size: 1.2em;
+  margin-block-end: 0;
+}
+
+.degree__item {
+  margin: 1em;
+  padding: 1.5em;
+  position: relative;
+  border: 1px solid var(--denim-color);
+}
+
+.degree__period {
+  font-size: 1.6em;
+  position: absolute;
+  top: -0.7em;
+  left: -0.7em;
+}
+
+.degree__title {
+  font-size: 1.6em;
+  margin-block-start: 1em;
+  margin-block-end: 0em;
+}
+
+.degree__school {
+  font-size: 1.4em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.degree__GPA {
+  font-size: 1.4em;
+  margin-block-start: 0em;
+  margin-block-end: 0.5em;
+}
+
+.degree__description {
+  font-size: 1.2em;
+  margin-block-end: 0;
+}
+
+.languages__block {
+  list-style: none;
+  font-size: 1.6em;
+  padding-inline-start: 1.5em;
+  padding-inline-end: 2em;
+}
+
+.languages__item {
+  margin-block-start: 0.25em;
+  margin-block-end: 0.25em;
+}
+
 
 /* CONTACT */
 
