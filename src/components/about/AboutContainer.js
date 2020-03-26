@@ -15,8 +15,8 @@ const AboutContainer = () => {
           Description
           Company
           Period {
-            End
-            Start
+            End(formatString: "MMM YYYY")
+            Start(formatString: "MMM YYYY")
           }
         }
       }
@@ -27,8 +27,8 @@ const AboutContainer = () => {
           GPA
           Description
           Period {
-            End
-            Start
+            End(formatString: "MMM YYYY")
+            Start(formatString: "MMM YYYY")
           }
         }
       }
