@@ -43,7 +43,7 @@ const About = ({ intro, skills, languages, experience, education }) => {
         <h3 className="about-section__title">Languages</h3>
         <ul className="languages__block">
           {languages.map(language => (
-            <li className="languages__item"><strong>{language.Name}</strong> -> {language.Level}</li>
+            <li key={language.Name} className="languages__item"><strong>{language.Name}</strong> -> {language.Level}</li>
           ))}
         </ul>
       </section>
