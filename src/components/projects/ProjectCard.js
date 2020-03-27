@@ -21,13 +21,14 @@ export const ProjectCard = ({ id, title, subtitle, year, cover }) => {
           ></p>
         </div>
       </div>
+      {cover &&
       <Img
         key={`${id}-image`}
         className="project-card__thumb"
         fluid={cover.childImageSharp.fluid}
         alt={`${title} card cover`}
         style={{ position: "absolute" }}
-      />
+      />}
     </div>,
     <div key={`${id}-card-shadow`} className="projects__grid-card-shadow"></div>,
   ]
