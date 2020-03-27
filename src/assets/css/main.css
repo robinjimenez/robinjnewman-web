@@ -297,6 +297,44 @@ body {
   top: 0;
 }
 
+.secondary-button {
+  -webkit-appearance: none;
+  background: none;
+  border: 1px var(--denim-color) solid;
+  color: var(--denim-color);
+  padding: 0.5em 0.75em;
+  font-size: 1em;
+  font-family: var(--manrope-font);
+  font-weight: var(--manrope-bold);
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.09s ease-in;
+}
+
+.secondary-button:hover {
+  color: var(--paper-color);
+}
+
+.secondary-button:before {
+  content: "";
+  position: absolute;
+  background-color: var(--denim-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 0;
+  transition: bottom 0.09s ease-in;
+}
+
+.secondary-button:hover:before {
+  background-color: var(--denim-color);
+  z-index: -1;
+  bottom: 0%;
+  transition: bottom 0.09s ease-in;
+}
+
 /* -- LABELS  --*/
 
 .label {
@@ -575,6 +613,15 @@ body {
 
 /* CONTACT */
 
+.contact-paragraph {
+  font-size: 1.6em;
+}
+
+.contact-email__link {
+  font-size: 1.6em;
+}
+
+
 .contact__form {
   font-size: 1.6em;
   display: flex;
@@ -629,6 +676,34 @@ input, textarea {
 .contact__submit {
   align-self: flex-end;
   margin: 2em 0 0;
+}
+
+.contact-social, .contact-email {
+  text-align: center;
+}
+
+.contact-social .contact-paragraph {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 2em;
+  margin-block-end: 0;
+}
+
+.contact-social .contact-paragraph:before, 
+.contact-social .contact-paragraph:after {
+  content: '';
+  border-bottom: 1px solid var(--ink-color);
+  opacity: 0.5;
+  flex-grow: 1;
+  margin: 0 0.5em 0.5em;
+  max-width: 10em;
+}
+
+.social-link {
+  color: var(--ink-color);
+  font-size: 4em;
+  margin: 0.25em;
+  display: inline-block;
 }
 
 /* FOOTER */
