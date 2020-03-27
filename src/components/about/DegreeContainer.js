@@ -11,7 +11,7 @@ const DegreeContainer = ({ degree }) => {
         <p className="degree__school">{degree.School}</p>
         <p className="degree__GPA">GPA: {degree.GPA}</p>
         <p className="degree__description">
-          Relevant subjects: {degree.Description}
+          <strong>Relevant subjects:</strong> {degree.Description}
         </p>
       </div>
     </div>
