@@ -7,7 +7,10 @@ const ContactContainer = () => {
   return (
     <section className="section section--bordered contact">
       <h2 className="section__title">Get in touch</h2>
-      <ContactForm />
+      <div className="contact-email">
+        <p className="contact-paragraph">Email me at</p>
+        <a className="secondary-button contact-email__link" href="mailto:hello@robinjnewman.com">hello@robinjnewman.com</a>
+      </div>
     </section>
   )
 }
