@@ -27,6 +27,7 @@
   --manrope-font: "Manrope", sans-serif;
   --manrope-light: 300;
   --manrope-regular: 400;
+  --manrope-bold: 700;
   --manrope-extrabold: 800;
 
   --bagnard-font: "Bagnard", serif;
@@ -34,7 +35,7 @@
 
   /* PADDINGS */
 
-  --mobile-padding: 5%;
+  --mobile-padding: 7.5%;
   --desktop-padding: 10%;
  
   /* RESPONSIVE BREAKPOINTS */

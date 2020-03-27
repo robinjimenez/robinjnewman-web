@@ -40,7 +40,7 @@ class Header extends Component {
           <CSSTransition
             in={!this.state.collapsed}
             appear={true}
-            timeout={5000}
+            timeout={1000}
             classNames="header__pre-logo-"
             unmountOnExit={true}
           >
