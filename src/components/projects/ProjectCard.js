@@ -1,13 +1,14 @@
 import React from "react"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const Label = ({ className, children }) => {
   return <div className={`${className} label label--trans`}>{children}</div>
 }
 
-export const ProjectCard = ({ id, title, subtitle, year, cover }) => {
+export const ProjectCard = ({ slug, title, subtitle, year, cover }) => {
   return [
-    <div key={`${id}-card`} className="projects__grid-card">
+    <Link key={`${slug}-card`} to={"/" + slug} className="projects__grid-card">
       <div  className="project-card__summary">
         <div className="project-card__summary-top">
           <Label className="project__year">{year}</Label>
@@ -23,14 +24,14 @@ export const ProjectCard = ({ id, title, subtitle, year, cover }) => {
       </div>
       {cover &&
       <Img
-        key={`${id}-image`}
+        key={`${slug}-image`}
         className="project-card__thumb"
         fluid={cover.childImageSharp.fluid}
         alt={`${title} card cover`}
         style={{ position: "absolute" }}
       />}
-    </div>,
-    <div key={`${id}-card-shadow`} className="projects__grid-card-shadow"></div>,
+    </Link>,
+    <div key={`${slug}-card-shadow`} className="projects__grid-card-shadow"></div>,
   ]
 }
 

@@ -8,9 +8,9 @@ const ProjectGrid = ({ projects }) => {
     <div className="projects__grid">
       {projects.map(project => {
         return (
-          <div key={project.id} className="projects__grid-item">
+          <div key={project.Slug} className="projects__grid-item">
             <ProjectCard
-              id={project.id}
+              slug={project.slug}
               title={project.Title}
               subtitle={project.Subtitle}
               year={project.Year}

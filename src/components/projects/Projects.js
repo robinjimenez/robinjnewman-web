@@ -8,7 +8,7 @@ const Projects = () => {
     query projects {
       allStrapiProject(sort: {order: DESC, fields: Year}) {
         nodes {
-          id
+          slug
           Year
           Title
           Subtitle
