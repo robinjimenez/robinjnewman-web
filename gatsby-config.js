@@ -34,6 +34,7 @@ module.exports = {
           `about`,
           `skill-type`,
           `language`,
+          `language-level`,
           `experience`,
           `education`,
           `user`

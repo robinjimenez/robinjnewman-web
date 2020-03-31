@@ -491,8 +491,14 @@ body {
   background-color: var(--sand-color);
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
 .about-section {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .about-section--intro {
@@ -607,7 +613,16 @@ body {
 
 .languages__item {
   margin-block-start: 0.25em;
-  margin-block-end: 0.25em;
+  margin-block-end: 1em;
+}
+
+.languages__level {
+  display: inline-block;
+  width: 100%;
+}
+
+.languages__enum {
+  display: inline-block;
 }
 
 
@@ -749,8 +764,13 @@ input, textarea {
   }
 
   .section--bordered .section__title {
-    margin: calc(var(--desktop-padding) * -0.9) 0;
-    padding: 0 1em;
+    margin: calc(var(--desktop-padding) * -0.8) 0;
+    padding: 0 0.5em;
+  }
+
+  .hero {
+    height: 45vh;
+    padding: 20vh 10vw;
   }
 
   .projects__grid-item:hover .projects__grid-card {
@@ -762,8 +782,78 @@ input, textarea {
     left: 0;
   }
 
-  .hero {
-    height: 45vh;
-    padding: 20vh 10vw;
+  .about-layout {
+    grid: [row1-start] "intro intro ." auto [row1-end]
+          [row2-start] "skills experience experience" auto [row2-end]
+          [row3-start] "skills education education" auto [row3-end]
+          [row4-start] "skills languages languages " auto [row4-end]
+          [row4-start] "skills . . " auto [row4-end]
+          / 1fr 1fr 1fr;
+    gap: 0em 10em;
   }
+
+  .about-section__title{
+    margin-block-start: 0;
+    
+  }
+
+  .about-section {
+    font-size: 1.25em;
+  }
+
+  .about-section--intro {
+    grid-area: intro;
+    font-size: 1.8em;
+  }
+
+  .about__intro :first-child {
+    margin-block-start: 0;
+  }
+
+  .about-section--skills {
+    grid-area: skills;
+  }
+
+  .about-section--skills .about-section__title {
+    margin-block-start: 0;
+  }
+
+  .about-section--experience {
+    grid-area: experience;
+  }
+
+  .job__block {
+    margin: 4em;
+  }
+
+  .about-section--education {
+    grid-area: education;
+  }
+
+  .degree__block {
+    margin: 4em;
+  }
+
+  .about-section--languages {
+    grid-area: languages;
+  }
+
+  .languages__block {
+    margin: 0 3em;
+    padding: 0;
+  }
+  
+  .languages__item {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .languages__enum {
+    margin-inline-start: 1em;
+  }
+
+  .contact-email, .contact-social {
+    font-size: 1.25em;
+  }
+
 }

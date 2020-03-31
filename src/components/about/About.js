@@ -6,7 +6,7 @@ import CollapsibleGroupContainer from "../CollapsibleGroupContainer"
 import JobContainer from "./JobContainer"
 import DegreeContainer from "./DegreeContainer"
 
-const About = ({ intro, skills, languages, experience, education }) => {
+const About = ({ intro, skills, languagelevels, languages, experience, education }) => {
   return (
     <div className="about-layout">
       <section className="about-section about-section--intro">
@@ -42,8 +42,13 @@ const About = ({ intro, skills, languages, experience, education }) => {
       <section className="about-section about-section--languages">
         <h3 className="about-section__title">Languages</h3>
         <ul className="languages__block">
-          {languages.map(language => (
-            <li key={language.Name} className="languages__item"><strong>{language.Name}</strong> -> {language.Level}</li>
+          {languagelevels.map(level => (
+            <li key={level.Name} className="languages__item">
+              <span className="languages__level">{level.Name}</span>
+              <strong className="languages__enum">
+              -> {languages.find(group => group.fieldValue === level.Name).nodes.map(lang => lang.Name).join(", ")}
+              </strong>
+            </li>
           ))}
         </ul>
       </section>
@@ -54,6 +59,7 @@ const About = ({ intro, skills, languages, experience, education }) => {
 About.propTypes = {
   intro: PropTypes.string.isRequired,
   skills: PropTypes.array.isRequired,
+  languagelevels: PropTypes.array.isRequired,
   languages: PropTypes.array.isRequired,
   experience: PropTypes.array.isRequired,
   education: PropTypes.array.isRequired,

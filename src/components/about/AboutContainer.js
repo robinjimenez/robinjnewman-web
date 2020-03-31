@@ -42,10 +42,17 @@ const AboutContainer = () => {
           }
         }
       }
-      allStrapiLanguage {
+      allStrapiLanguageLevel(sort: {fields: Order, order: ASC}) {
         nodes {
-          Level
           Name
+        }
+      }
+      allStrapiLanguage {
+        group(field: Level___Name) {
+          fieldValue
+          nodes {
+            Name
+          }
         }
       }
     }
@@ -57,7 +64,8 @@ const AboutContainer = () => {
       <About
         intro={data.strapiAbout.Introduction}
         skills={data.allStrapiSkillType.nodes}
-        languages={data.allStrapiLanguage.nodes}
+        languagelevels={data.allStrapiLanguageLevel.nodes}
+        languages={data.allStrapiLanguage.group}
         experience={data.allStrapiExperience.nodes}
         education={data.allStrapiEducation.nodes}
       />
