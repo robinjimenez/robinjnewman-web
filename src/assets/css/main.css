@@ -694,6 +694,12 @@ input, textarea {
     padding: 20vh 10vw;
   }
 
+  .projects__grid {
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+  }
+
   .projects__grid-item:hover .projects__grid-card {
     margin: -1em 1em 1em -1em;
   }
@@ -701,6 +707,19 @@ input, textarea {
   .projects__grid-item:hover .projects__grid-card-shadow {
     top: 0;
     left: 0;
+  }
+
+  .project-card__title {
+    font-size: 2.4em;
+    margin-bottom: 0.5em;
+  }
+
+  .project-card__presubtitle-line {
+    height: 1em;
+  }
+
+  .project-card__subtitle {
+    font-size: 1.6em;
   }
 
   .about-layout {
@@ -775,6 +794,10 @@ input, textarea {
 
   .contact-email, .contact-social {
     font-size: 1.25em;
+  }
+
+  .contact-paragraph {
+    margin-bottom: 0.25em;
   }
 
   .project-page {
