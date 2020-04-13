@@ -12,7 +12,7 @@ import "../assets/css/main.css"
 const IndexPage = ({ data }) => {
 
   return (
-    <Layout>
+    <Layout page="home-page">
       <Hero>
         <h1 className="subtitle">
           {data.site.siteMetadata.subtitle.first_line}

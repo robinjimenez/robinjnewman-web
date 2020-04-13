@@ -6,16 +6,20 @@ import Logo from "./Logo"
 
 class Header extends Component {
   state = {
-    collapsed: false,
+    collapsed: true,
   }
 
   componentDidMount() {
-    this._handleScroll();
-    window.addEventListener("scroll", this._handleScroll)
+    if (!this.props.isFixed) {
+      this._handleScroll();
+      window.addEventListener("scroll", this._handleScroll)
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this._handleScroll)
+    if (!this.props.isFixed) {
+      window.removeEventListener("scroll", this._handleScroll)
+    }
   }
 
   _handleScroll = (e) => {
@@ -27,19 +31,19 @@ class Header extends Component {
   }
 
   render() {
-    const { name } = this.props;
+    const { isFixed, name } = this.props;
     const fullName = name.split(" ");
 
     return (
       <header
         className={`header header--state-${
-          this.state.collapsed ? "collapsed" : "expanded"
+          (isFixed || this.state.collapsed) ? "collapsed" : "expanded"
         }`}
       >
         <p className="header__logo">
           <CSSTransition
             in={!this.state.collapsed}
-            appear={true}
+            appear={!isFixed}
             timeout={1000}
             classNames="header__pre-logo-"
             unmountOnExit={true}
@@ -51,7 +55,7 @@ class Header extends Component {
               firstName={fullName[0]}
               firstSurname={fullName[1]}
               secondSurname={fullName[2]}
-              collapsed={this.state.collapsed}
+              collapsed={!isFixed && this.state.collapsed}
             />
           </Link>
         </p>

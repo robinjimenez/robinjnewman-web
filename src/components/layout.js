@@ -6,7 +6,7 @@ import SEO from "./Seo"
 import Header from "./Header"
 import Footer from "./Footer"
 
-const Layout = ({ children }) => { 
+const Layout = ({ page, children }) => { 
   
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -21,8 +21,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <SEO title={data.site.siteMetadata.title} />
-      <Header name="Robin Jiménez Newman" />
-      <main>{children}</main>
+      <Header isFixed={document.location.pathname !== "/"} name="Robin Jiménez Newman" />
+      <main className={page}>{children}</main>
       <Footer />
     </>
   )
