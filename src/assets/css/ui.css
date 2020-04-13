@@ -1,0 +1,250 @@
+/* --------------------- */
+/* ---- UI ELEMENTS ---- */
+/* --------------------- */
+
+/* -- COLLAPSIBLE GROUP  --*/
+.collapsible-group {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: 1px var(--ink-color) solid;
+  justify-content: flex-start;
+}
+
+.collapsible-group__item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+}
+
+.collapsible-item__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em 0.5em 2em;
+  align-items: center;
+  position: relative;
+  flex: none;
+  transition: bottom 0.09s ease-in;
+}
+
+.collapsible-group__item:not(:last-child) .collapsible-item__header {
+  border-bottom: 1px var(--ink-color) solid;
+}
+
+.collapsible-group__item--expanded:last-child .collapsible-item__header {
+  border-bottom: 1px var(--ink-color) solid;
+}
+
+.collapsible-group__item--collapsed:last-child .collapsible-item__header {
+  border-bottom: 0px var(--ink-color) solid;
+  transition: border 0s ease-in-out 0.5s;
+}
+
+.collapsible-group__item--expanded:not(:last-child) {
+  border-bottom: 1px var(--ink-color) solid;
+}
+
+.collapsible-group__item--collapsed {
+  border-bottom: 0px var(--ink-color) solid;
+  transition: border 0s ease-in-out 0.5s;
+}
+
+.collapsible-group__item--collapsed .collapsible-item__header:before {
+  content: "";
+  position: absolute;
+  background: var(--paper-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 0;
+  transition: bottom 0.09s ease-in;
+}
+
+.collapsible-group__item--expanded .collapsible-item__header:before {
+  content: "";
+  position: absolute;
+  background: var(--paper-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  bottom: 0%;
+  transition: bottom 0.09s ease-in;
+}
+
+.collapsible-item__title {
+  font-size: 1.6em;
+  display: inline;
+  margin: 0.5em 0;
+  z-index: 1;
+}
+
+.collapsible-item__toggle {
+  font-size: 2em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  right: 1em;
+  color: var(--paper-color);
+  border: 1px var(--ink-color) solid;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.collapsible-item__toggle:focus {
+  outline: none;
+}
+
+.collapsible-item__toggle--expand {
+  background-color: var(--denim-color);
+  top: 0.5em;
+}
+
+.collapsible-item__toggle--collapse {
+  background-color: var(--wool-color);
+  top: 1.55em;
+}
+
+.collapsible-item__content {
+  overflow: hidden;
+  max-height: 0em;
+  transition: max-height 500ms ease-in-out;
+}
+
+.collapsible-item__content--enter-done {
+  max-height: 100em;
+}
+
+.collapsible-item__content--exit-done {
+  max-height: 0em;
+}
+
+/* -- BUTTONS  --*/
+.button {
+  display: inline-block;
+  margin: 0.5em;
+  text-decoration: none;
+  -webkit-appearance: none;
+  text-align: center;
+}
+
+.button--primary {
+  background: none;
+  border: 1px var(--denim-color) solid;
+  padding: 0;
+  font-size: 1em;
+  font-family: var(--manrope-font);
+  position: relative;
+  cursor: pointer;
+}
+
+.button--primary__content {
+  background-color: var(--denim-color);
+  border: 1px var(--denim-color) solid;
+  color: var(--paper-color);
+  padding: 0.5em 0.75em;
+  position: relative;
+  left: -0.5em;
+  top: -0.5em;
+  transition: all 0.5s ease-in-out;
+}
+
+.button--primary__content:hover {
+  left: 0;
+  top: 0;
+}
+
+.button--secondary {
+  background: none;
+  border: 1px var(--denim-color) solid;
+  color: var(--denim-color);
+  padding: 0.5em 0.75em;
+  font-size: 1em;
+  font-family: var(--manrope-font);
+  font-weight: var(--manrope-bold);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.09s ease-in;
+}
+
+.button--secondary:hover {
+  color: var(--paper-color);
+}
+
+.button--secondary:before {
+  content: "";
+  position: absolute;
+  background-color: var(--denim-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 0;
+  transition: bottom 0.09s ease-in;
+}
+
+.button--secondary:hover:before {
+  background-color: var(--denim-color);
+  z-index: -1;
+  bottom: 0%;
+  transition: bottom 0.09s ease-in;
+}
+
+/* -- LABELS  --*/
+
+.label {
+  background-color: var(--denim-color);
+  color: var(--paper-color);
+  padding: 0.25em 0.5em;
+  display: inline-block;
+}
+
+.label--trans {
+  background: none;
+  color: var(--ink-color);
+  padding: 0;
+  font-weight: var(--manrope-extrabold);
+  mix-blend-mode: darken;
+  opacity: 0.5;
+}
+
+/* -- IMAGES  --*/
+
+.caption-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid var(--ink-color);
+}
+
+.caption-image__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 1em;
+  left: 1em;
+  background-color: var(--ink-color);
+  color: var(--paper-color);
+  z-index: -1;
+}
+
+.caption-image__shadow:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.caption-image__caption {
+  position: relative;
+  background-color: var(--ink-color);
+  padding: 0 0 1em 1em;
+}
+
+.caption-image__caption p {
+  margin: 0;
+}

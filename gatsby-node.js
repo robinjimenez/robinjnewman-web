@@ -26,29 +26,71 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   
-  const getArticles = makeRequest(graphql, `
+  const getProjects = makeRequest(graphql, `
     {
       allStrapiProject {
-        edges {
-          node {
-            slug
+        nodes {
+          slug
+          Title
+          Subtitle
+          Description {
+            Heading
+            Paragraph
+            CaptionedImage {
+              Image {
+                childImageSharp {
+                  fluid {
+                    base64
+                    tracedSVG
+                    aspectRatio
+                    srcWebp
+                    srcSetWebp
+                    originalName
+                  }
+                }
+              }
+              Caption
+            }
+          }
+          GitHubLink
+          ProjectLink
+          Year
+          tags {
+            Name
+          }
+          categories {
+            Name
+          }
+          Cover {
+            childImageSharp {
+              fluid(fit: COVER) {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+                originalImg
+                originalName
+                presentationWidth
+                presentationHeight
+              }
+            }
           }
         }
       }
     }
     `).then(result => {
     // Create pages for each article.
-    result.data.allStrapiProject.edges.forEach(({ node }) => {
+    result.data.allStrapiProject.nodes.forEach((node) => {
       createPage({
         path: `/${node.slug}`,
         component: path.resolve(`src/components/templates/ProjectPage.js`),
         context: {
-          id: node.slug,
+          project: node
         },
       })
     })
   });
   
   // Query for articles nodes to use in creating pages.
-  return getArticles;
+  return getProjects;
 };
