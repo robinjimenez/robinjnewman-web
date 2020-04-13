@@ -8,7 +8,7 @@ const ProjectGrid = ({ projects }) => {
     <div className="projects__grid">
       {projects.map(project => {
         return (
-          <div key={project.Slug} className="projects__grid-item">
+          <div key={project.slug} className="projects__grid-item">
             <ProjectCard
               slug={project.slug}
               title={project.Title}

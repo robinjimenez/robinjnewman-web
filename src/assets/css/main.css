@@ -203,8 +203,32 @@ body {
   color: var(--ink-color);
 }
 
-.projects__grid-card--highlighted {
-  margin: -0.25em 0.25em 0.25em -0.25em;
+.projects__grid-card:hover:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  position: absolute;
+  background: var(--paper-color);
+  background: linear-gradient(45deg, rgba(243,239,232,0) 48%, var(--paper-color) 48%, var(--paper-color) 52%, rgba(243,239,232,0) 52%);
+  mix-blend-mode: overlay;
+  animation: card-shine 800ms linear both;
+}
+
+@keyframes card-shine {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  50% {
+    left: 0%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 
 .projects__grid-card-shadow {
