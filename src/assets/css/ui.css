@@ -202,6 +202,13 @@
   display: inline-block;
 }
 
+.label--secondary {
+  background-color: var(--wool-color);
+  color: var(--paper-color);
+  padding: 0.5em 0.75em;
+  display: inline-block;
+}
+
 .label--compact {
   padding: 0.25em 0.5em;
 }
