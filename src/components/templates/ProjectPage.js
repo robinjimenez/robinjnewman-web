@@ -21,18 +21,23 @@ export default ({ pageContext }) => {
     <Layout page="project-page">
       <ProjectCover title={Title} subtitle={Subtitle} cover={Cover} />
       <section className="section project-information">
-        <div className="label label--trans project-detail__year" >{ Year }</div>
+      <div className="project-detail__year">Year <span className="label label--trans project__year" >{ Year }</span>
+      </div>
         <div className="project-detail__categories" >
-          {categories.length <= 1 ? "Category" : "Categories"}
-        { categories.map((cat)=>{
-          return (<div className="label project-detail__category">{cat.Name}</div>)
-        })}
+          <div className="project__categories-title">{categories.length <= 1 ? "Category" : "Categories"}</div>
+          <div className="project__categories-container">
+            { categories.map((cat)=>{
+              return (<div className="label project__category-item">{cat.Name}</div>)
+            })}
+          </div>
         </div>
         <div className="project-detail__tags" >
-          {tags.length <= 1 ? "Tag" : "Tags"}
-        { tags.map((tag)=>{
-          return (<div className="label label--trans project-detail__tag">{tag.Name}</div>)
-        })}
+          <div className="project__tags-title">{tags.length <= 1 ? "Tag" : "Tags"}</div>
+          <div className="project__tags-container">
+            { tags.map((tag)=>{
+              return (<div className="label label--secondary project__tag-item">{tag.Name}</div>)
+            })}
+          </div>
         </div>
         <div className="project-detail__links">
           <a
