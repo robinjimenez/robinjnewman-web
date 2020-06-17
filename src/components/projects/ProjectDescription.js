@@ -3,13 +3,11 @@ import CaptionImage from "../CaptionImage"
 
 const ProjectDescription = ({ description }) => (
   <div className="project-detail__description">
-    {description.map((block, index) => {
-      let placement = index % 2 ? "right" : "left";
-      if (!block.CaptionedImage) placement = "center"; 
+    {description.map((block) => {
       return (
         <div
           className={
-            "project-description-block project-description-block--" + placement
+            "project-description-block project-description-block--" + block.Alignment.toLowerCase()
           }
         >
           <div className="project-description-block__text">

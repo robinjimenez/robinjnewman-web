@@ -36,6 +36,7 @@ exports.createPages = ({ actions, graphql }) => {
           Description {
             Heading
             Paragraph
+            Alignment
             CaptionedImage {
               Image {
                 childImageSharp {
