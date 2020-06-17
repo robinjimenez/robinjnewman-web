@@ -6,15 +6,9 @@ import CollapsibleGroupContainer from "../CollapsibleGroupContainer"
 import JobContainer from "./JobContainer"
 import DegreeContainer from "./DegreeContainer"
 
-const About = ({ intro, skills, languagelevels, languages, experience, education }) => {
+const About = ({ skills, languagelevels, languages, experience, education }) => {
   return (
     <div className="about-layout">
-      <section className="about-section about-section--intro">
-        <div
-          className="about__intro"
-          dangerouslySetInnerHTML={{ __html: intro }}
-        />
-      </section>
       <section className="about-section about-section--skills">
         <h3 className="about-section__title">Skills</h3>
         <CollapsibleGroupContainer>
