@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransition } from "react-transition-group"
 
 import Logo from "./Logo"
 
@@ -11,7 +11,7 @@ class Header extends Component {
 
   componentDidMount() {
     if (!this.props.isFixed) {
-      this._handleScroll();
+      this._handleScroll()
       window.addEventListener("scroll", this._handleScroll)
     }
   }
@@ -22,7 +22,7 @@ class Header extends Component {
     }
   }
 
-  _handleScroll = (e) => {
+  _handleScroll = e => {
     if (this.state.collapsed && window.scrollY <= 5) {
       this.setState({ collapsed: !this.state.collapsed })
     } else if (!this.state.collapsed && window.scrollY >= 5) {
@@ -31,13 +31,13 @@ class Header extends Component {
   }
 
   render() {
-    const { isFixed, name } = this.props;
-    const fullName = name.split(" ");
+    const { isFixed, name } = this.props
+    const fullName = name.split(" ")
 
     return (
       <header
         className={`header header--state-${
-          (isFixed || this.state.collapsed) ? "collapsed" : "expanded"
+          isFixed || this.state.collapsed ? "collapsed" : "expanded"
         }`}
       >
         <p className="header__logo">
@@ -48,9 +48,18 @@ class Header extends Component {
             classNames="header__pre-logo-"
             unmountOnExit={true}
           >
-              <span className="header__pre-logo">Hi! I'm </span>
+            <span className="header__pre-logo">Hi! I'm </span>
           </CSSTransition>
           <Link id="site-title" to="/">
+            {isFixed && (
+              <CSSTransition
+                classNames="back-arrow-"
+                appear
+                in
+              >
+                <span className="back-arrow" aria-label="back"></span>
+              </CSSTransition>
+            )}
             <Logo
               firstName={fullName[0]}
               firstSurname={fullName[1]}

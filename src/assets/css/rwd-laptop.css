@@ -2,6 +2,10 @@
 
 @media screen and (min-width: 800px) {
 
+}
+
+@media screen and (min-width: 1024px) {
+
   .xs-break {
     display: none;
   }
@@ -22,13 +26,28 @@
   }
 
   .header--state-collapsed {
-    height: 15vh;
+    height: 2.5em;
     padding-bottom: 0;
     transition: all 0.5s ease-out;
   }
 
+  .back-arrow.back-arrow--enter-done{
+    margin-left: -1.5em;
+  }
+
   .subtitle {
     font-size: 4em;
+  }
+
+  .section__container {
+    flex-grow: 1;
+    max-width: 1200px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .section__title {
@@ -49,6 +68,8 @@
   .hero {
     height: 45vh;
     padding: 20vh 10vw;
+    max-width: 100%;
+    justify-content: flex-start;
   }
 
   .projects__grid {
@@ -80,11 +101,6 @@
   }
 
   .about-layout {
-    grid: [row1-start] "skills experience experience" auto [row1-end]
-          [row2-start] "skills education education" auto [row2-end]
-          [row3-start] "skills languages languages " auto [row3-end]
-          [row4-start] "skills . . " auto [row4-end]
-          / 1.5fr 1fr 1fr;
     gap: 0em 10em;
   }
 
@@ -119,54 +135,27 @@
   }
 
   .about__intro-text:nth-child(2)::before {
-    content: '<';
     font-size: 10.5em;
-    font-weight: var(--manrope-extrabold);
-    position: absolute;
-    opacity: 0.1;
     top: 0.15em;
     left: -0.75em;
-    line-height: 0.5;
   }
   
   .about__intro-text:last-child::after {
-    content: '/>';
     font-size: 10em;
-    letter-spacing: -0.2em;
-    font-weight: var(--manrope-extrabold);
-    position: absolute;
     right: -0.8em;
     bottom: 0.10em;
-    opacity: 0.1;
-    line-height: 0.5;
-  }
-
-  .about-section--skills {
-    grid-area: skills;
   }
 
   .about-section--skills .about-section__title {
     margin-block-start: 0;
   }
 
-  .about-section--experience {
-    grid-area: experience;
-  }
-
   .job__block {
     margin: 4em;
   }
 
-  .about-section--education {
-    grid-area: education;
-  }
-
   .degree__block {
     margin: 4em;
-  }
-
-  .about-section--languages {
-    grid-area: languages;
   }
 
   .languages__block {
@@ -175,7 +164,6 @@
   }
   
   .languages__item {
-    display: inline-block;
     margin: 0;
   }
 
@@ -192,7 +180,11 @@
   }
 
   .project-page {
-    padding-top: 15vh;
+    padding-top: 2.5em;
+  }
+
+  .project-cover {
+    align-items: flex-end;
   }
 
   .project-detail__title {
@@ -203,7 +195,8 @@
     font-size: 3em;
   }
 
-  .project-information {
+  .project-information .section__container {
+    display: grid;
     grid-template-columns: minmax(auto, 70%) auto;
     grid-template-rows: auto auto;
     padding-top: 3em;

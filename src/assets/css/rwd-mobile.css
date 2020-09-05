@@ -1,0 +1,43 @@
+/* MEDIUM SCREEN */
+
+@media screen and (min-width: 375px) {
+
+  .xs-break {
+    display: none;
+  }
+
+  .large-break {
+    display: initial;
+  }
+
+  .header {
+    font-size: 2.2em;
+  }
+
+  .subtitle {
+    font-size: 2.2em;
+  }
+
+  .section--bordered .section__title {
+    margin: calc(var(--mobile-padding) * -2) 0;
+  }
+}
+
+/* LARGE SCREEN */
+
+@media screen and (min-width: 425px) {
+
+  .xs-break {
+    display: none;
+  }
+
+  .large-break {
+    display: initial;
+  }
+
+  .section__title {
+    font-size: 3.5em;
+  }
+
+  
+}

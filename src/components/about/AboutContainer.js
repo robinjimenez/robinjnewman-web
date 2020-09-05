@@ -9,7 +9,7 @@ const AboutContainer = () => {
       strapiAbout {
         Introduction
       }
-      allStrapiExperience(sort: {fields: Period___Start, order: DESC}){
+      allStrapiExperience(sort: { fields: Period___Start, order: DESC }) {
         nodes {
           Title
           Description
@@ -42,7 +42,7 @@ const AboutContainer = () => {
           }
         }
       }
-      allStrapiLanguageLevel(sort: {fields: Order, order: ASC}) {
+      allStrapiLanguageLevel(sort: { fields: Order, order: ASC }) {
         nodes {
           Name
         }
@@ -60,20 +60,22 @@ const AboutContainer = () => {
 
   return (
     <section className="section about">
-      <h2 className="section__title">- About me -</h2>
-      <section className="about-section about-section--intro">
-        <div
-          className="about__intro"
-          dangerouslySetInnerHTML={{ __html: data.strapiAbout.Introduction }}
+      <div className="section__container">
+        <h2 className="section__title">- About me -</h2>
+        <section className="about-section about-section--intro">
+          <div
+            className="about__intro"
+            dangerouslySetInnerHTML={{ __html: data.strapiAbout.Introduction }}
+          />
+        </section>
+        <About
+          skills={data.allStrapiSkillType.nodes}
+          languagelevels={data.allStrapiLanguageLevel.nodes}
+          languages={data.allStrapiLanguage.group}
+          experience={data.allStrapiExperience.nodes}
+          education={data.allStrapiEducation.nodes}
         />
-      </section>
-      <About
-        skills={data.allStrapiSkillType.nodes}
-        languagelevels={data.allStrapiLanguageLevel.nodes}
-        languages={data.allStrapiLanguage.group}
-        experience={data.allStrapiExperience.nodes}
-        education={data.allStrapiEducation.nodes}
-      />
+      </div>
     </section>
   )
 }

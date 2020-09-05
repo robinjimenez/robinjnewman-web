@@ -1,0 +1,129 @@
+/* HORIZONTAL TABLET */
+
+@media screen and (min-width: 640px) {
+
+  .about__intro-text {
+    margin: 0;
+  }
+
+
+  .about-layout {
+    grid: [row1-start] "skills experience" auto [row1-end]
+          [row2-start] "skills experience" auto [row2-end]
+          [row3-start] "skills education " auto [row3-end]
+          [row4-start] "skills languages" auto [row4-end]
+          / 1.5fr 2fr;
+    gap: 0em 4em;
+  }
+
+  .about-section--skills {
+    grid-area: skills;
+  }
+
+  .about-section--education {
+    grid-area: education;
+  }
+
+  .about-section--experience {
+    grid-area: experience;
+  }
+
+  .about-section--languages {
+    grid-area: languages;
+  }
+
+
+  .job__block {
+    margin: 2em 0 2em 2em;
+  }
+
+  .degree__block {
+    margin: 2em 0 2em 2em;
+  }
+
+  .languages-item {
+    display: inline-block;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .xs-break {
+    display: none;
+  }
+
+  .large-break {
+    display: initial;
+  }
+
+  .header {
+    font-size: 3em;
+  }
+
+  .header--state-collapsed {
+    height: 2.5em;
+  }
+
+  .header--state-collapsed .header__logo {
+    margin-block-end: 0.65em;
+  }
+
+  .subtitle {
+    font-size: 3em;
+  }
+
+  .section--bordered {
+    padding: calc(var(--mobile-padding) * 0.8) var(--mobile-padding)
+    var(--mobile-padding);
+  }
+
+  .section--bordered .section__title {
+    margin: calc(var(--mobile-padding) * -1.4) 0;
+  }
+
+  .projects {
+    margin-top: 0;
+  }
+
+  .projects__grid {
+    margin: -1em;
+  }
+
+  .about__intro {
+    padding: 0 0 4em 0;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+  }
+
+  .about__intro-text {
+    margin: 0;
+    font-size: 1.8em;
+  }
+
+  .about__intro-text:nth-child(2)::before {
+    content: '<';
+    font-size: 9.5em;
+    font-weight: var(--manrope-extrabold);
+    position: absolute;
+    opacity: 0.1;
+    top: 0.2em;
+    left: -0.7em;
+    line-height: 0.5;
+  }
+  
+  .about__intro-text:last-child::after {
+    content: '/>';
+    font-size: 9em;
+    letter-spacing: -0.2em;
+    font-weight: var(--manrope-extrabold);
+    position: absolute;
+    right: -0.7em;
+    bottom: 0.15em;
+    opacity: 0.1;
+    line-height: 0.5;
+  }
+
+}

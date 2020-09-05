@@ -47,8 +47,8 @@ const CollapsibleGroupContainer = props => {
 
   return (
     <div className="collapsible-group">
-      {items.map((item,index) => {
-        return <CollapsibleItem key={item.key} content={item} isCollapsed={index > 0} />
+      {items.map((item) => {
+        return <CollapsibleItem key={item.key} content={item} isCollapsed={false} />
       })}
     </div>
   )

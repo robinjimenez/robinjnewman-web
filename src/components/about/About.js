@@ -51,7 +51,6 @@ const About = ({ skills, languagelevels, languages, experience, education }) => 
 }
 
 About.propTypes = {
-  intro: PropTypes.string.isRequired,
   skills: PropTypes.array.isRequired,
   languagelevels: PropTypes.array.isRequired,
   languages: PropTypes.array.isRequired,

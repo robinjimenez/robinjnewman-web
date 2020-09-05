@@ -25,9 +25,11 @@ const Projects = () => {
   `)
 
   return (
-    <section className="section section--bordered projects">
-      <h2 className="section__title">Projects</h2>
-      <ProjectGrid projects={data.allStrapiProject.nodes}></ProjectGrid>
+    <section className="section projects">
+      <div className="section__container section--bordered">
+        <h2 className="section__title">Projects</h2>
+        <ProjectGrid projects={data.allStrapiProject.nodes}></ProjectGrid>
+      </div>
     </section>
   )
 }

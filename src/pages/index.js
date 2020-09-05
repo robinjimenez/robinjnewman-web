@@ -8,6 +8,10 @@ import ContactContainer from "../components/contact/ContactContainer"
 import AboutContainer from "../components/about/AboutContainer"
 
 import "../assets/css/main.css"
+import "../assets/css/rwd-mobile.css"
+import "../assets/css/rwd-tablet.css"
+import "../assets/css/rwd-laptop.css"
+
 
 const IndexPage = ({ data }) => {
 
