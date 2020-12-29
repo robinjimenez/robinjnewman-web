@@ -18,9 +18,6 @@
     font-size: 2.2em;
   }
 
-  .section--bordered .section__title {
-    margin: calc(var(--mobile-padding) * -2) 0;
-  }
 }
 
 /* LARGE SCREEN */
@@ -47,6 +44,10 @@
 
   .project-page {
     padding-top: 2em;
+  }
+
+  .section--bordered .section__title {
+    margin: calc(var(--mobile-padding) * -2.2) 0;
   }
   
 }

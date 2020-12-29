@@ -45,6 +45,10 @@
     display: inline-block;
   }
 
+  .section--bordered .section__title {
+    margin: calc(var(--mobile-padding) * -2) 0;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -79,7 +83,7 @@
   }
 
   .section--bordered .section__title {
-    margin: calc(var(--mobile-padding) * -1.4) 0;
+    margin: calc(var(--mobile-padding) * -1.6) 0;
   }
 
   .projects {

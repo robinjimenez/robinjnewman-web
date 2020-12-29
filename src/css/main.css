@@ -1,3 +1,4 @@
+@import "fonts.css";
 @import "init.css";
 @import "ui.css";
 
@@ -8,14 +9,17 @@ body {
   font-family: var(--manrope-font);
   font-weight: var(--manrope-light);
   color: var(--ink-color);
+  letter-spacing: 0px;
 }
 
 h1 {
   font-size: 5em;
+  letter-spacing: normal;
 }
 
 h2 {
   font-size: 2em;
+  letter-spacing: normal;
 }
 
 .large-break {
@@ -161,6 +165,8 @@ h2 {
 .section__title {
   font-family: var(--bagnard-font);
   font-size: 3em;
+  letter-spacing: normal;
+  font-weight: 400;
 }
 
 .section--bordered {
@@ -171,7 +177,7 @@ h2 {
 }
 
 .section--bordered .section__title {
-  margin: calc(var(--mobile-padding) * -2.1) 0;
+  margin: calc(var(--mobile-padding) * -2.5) 0;
   background-color: var(--paper-color);
   padding: 0 0.45em;
   float: left;
@@ -370,6 +376,7 @@ h2 {
 .about-section__title {
   font-family: var(--bagnard-font);
   font-size: 2.4em;
+  font-weight: 400;
 }
 
 .skill-type__block {
@@ -802,6 +809,7 @@ input, textarea {
 .project-description__heading {
   font-size: 3em;
   font-family: var(--bagnard-font);
+  font-weight: 400;
 }
 
 .project-description__paragraph {

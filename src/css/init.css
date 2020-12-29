@@ -1,0 +1,39 @@
+/* ------------------------ */
+/* ---- INITIALISATION ---- */
+/* ------------------------ */
+
+/* ROOT VARIABLES*/
+
+:root {
+  /* THEME COLOURS*/
+
+  --paper-color: rgba(243, 239, 232, 1);
+  --paper-transparent: rgba(243, 239, 232, 0);
+  --denim-color: rgba(61, 60, 84, 1);
+  --wool-color: rgba(128, 40, 20, 1);
+  --sand-color: rgba(237, 219, 193, 1);
+  --ink-color: rgba(37, 35, 32, 1);
+
+  /* THEME FONTS */
+
+  --manrope-font: "Manrope", sans-serif;
+  --manrope-light: 300;
+  --manrope-regular: 500;
+  --manrope-bold: 700;
+  --manrope-extrabold: 800;
+
+  --bagnard-font: "Bagnard", serif;
+
+  /* PADDINGS */
+
+  --mobile-padding: 7.5%;
+  --desktop-padding: 10%;
+ 
+  /* RESPONSIVE BREAKPOINTS */
+
+  --small-bp: 320px;
+  --mobile-bp: 480px;
+  --tablet-bp: 768px;
+  --laptop-bp: 1024px;
+  --desktop-bp: 1280px;
+}

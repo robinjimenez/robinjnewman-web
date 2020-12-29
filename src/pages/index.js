@@ -7,10 +7,10 @@ import Projects from "../components/projects/Projects"
 import ContactContainer from "../components/contact/ContactContainer"
 import AboutContainer from "../components/about/AboutContainer"
 
-import "../assets/css/main.css"
-import "../assets/css/rwd-mobile.css"
-import "../assets/css/rwd-tablet.css"
-import "../assets/css/rwd-laptop.css"
+import "../css/main.css"
+import "../css/rwd-mobile.css"
+import "../css/rwd-tablet.css"
+import "../css/rwd-laptop.css"
 
 
 const IndexPage = ({ location, data }) => {

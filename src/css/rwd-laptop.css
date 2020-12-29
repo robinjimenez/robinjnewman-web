@@ -1,9 +1,5 @@
 /* LAPTOP */
 
-@media screen and (min-width: 800px) {
-
-}
-
 @media screen and (min-width: 1024px) {
 
   .xs-break {
@@ -60,7 +56,7 @@
   }
 
   .section--bordered .section__title {
-    margin: calc(var(--desktop-padding) * -0.9) 0;
+    margin: calc(var(--desktop-padding) * -1) 0;
     padding: 0 0.5em;
   }
 
