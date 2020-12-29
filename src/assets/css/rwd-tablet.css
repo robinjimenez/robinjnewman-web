@@ -90,6 +90,22 @@
     margin: -1em;
   }
 
+  .project-description-block {
+    margin-bottom: 5em;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .project-description-block--left {
+    flex-direction: row-reverse;
+  }
+
+  .project-description-block__image {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+
   .about__intro {
     padding: 0 0 4em 0;
     position: relative;

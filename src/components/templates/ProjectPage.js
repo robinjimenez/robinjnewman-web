@@ -1,10 +1,11 @@
 import React from "react"
 
+import SEO from "../../components/Seo"
 import Layout from "../Layout"
 import ProjectCover from "../projects/ProjectCover"
 import ProjectDescription from "../projects/ProjectDescription"
 
-export default ({ pageContext }) => {
+export default ({ location, pageContext }) => {
   const {
     Title,
     Subtitle,
@@ -18,7 +19,8 @@ export default ({ pageContext }) => {
   } = pageContext.project
 
   return (
-    <Layout page="project-page">
+    <Layout location={location} page="project-page">
+      <SEO title={Title} />
       <ProjectCover title={Title} subtitle={Subtitle} cover={Cover} />
       <section className="section project-information">
         <div className="section__container">

@@ -61,7 +61,7 @@
   }
 
   .section--bordered .section__title {
-    margin: calc(var(--desktop-padding) * -0.8) 0;
+    margin: calc(var(--desktop-padding) * -0.9) 0;
     padding: 0 0.5em;
   }
 
@@ -249,19 +249,9 @@
     grid-column: span 2 ;
   }
 
-  .project-description-block {
-    margin-bottom: 5em;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
   .project-description-block:first-child {
     flex-direction: row;
     font-size: 1.6em;
-  }
-
-  .project-description-block--left {
-    flex-direction: row-reverse;
   }
 
   .project-description-block--center {

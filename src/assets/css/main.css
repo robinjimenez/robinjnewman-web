@@ -10,6 +10,14 @@ body {
   color: var(--ink-color);
 }
 
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
 .large-break {
   display: none;
 }
@@ -112,7 +120,7 @@ body {
 }
 
 .header__pre-logo--exit-active {
-  margin-left: -3em;
+  margin-left: -2.8em;
   opacity: 0;
   transition: opacity 200ms ease-in-out, margin 500ms ease-in-out 0.5s;
 }
@@ -636,17 +644,9 @@ input, textarea {
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(0deg, rgb(116, 34, 16) 25%, rgba(133, 36, 14, 0) 55%);
-  background-size: 100% 250%;
-  background-position: 50% 100%;
+  background: linear-gradient(0deg, rgb(116, 34, 16) 0%, rgba(133, 36, 16, 0.9) 100%);
   mix-blend-mode: multiply;
   z-index: 1;
-  transition: all 500ms ease-in-out;
-}
-
-.project-cover:hover .project-detail__cover-image:after {
-  background-size: 100% 100%;
-  background-position: 50% 0%;
   transition: all 500ms ease-in-out;
 }
 

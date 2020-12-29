@@ -13,10 +13,10 @@ import "../assets/css/rwd-tablet.css"
 import "../assets/css/rwd-laptop.css"
 
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ location, data }) => {
 
   return (
-    <Layout page="home-page">
+    <Layout location={location} page="home-page">
       <Hero>
         <h1 className="subtitle">
           {data.site.siteMetadata.subtitle.first_line}
