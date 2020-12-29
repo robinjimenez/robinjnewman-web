@@ -589,6 +589,46 @@ input, textarea {
   display: inline-block;
 }
 
+/* NOT-FOUND */
+
+.not-found-page {
+  height: 100vh;
+}
+
+.not-found {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.not-found::before {
+  content: '404';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40vw;
+  line-height: 1em;
+  font-weight: var(--manrope-extrabold);
+  color: var(--denim-color);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.not-found__title {
+  text-align: center;
+  margin: 0;
+  line-height: 0.8em;
+}
+
+.not-found__subtitle {
+  font-weight: var(--manrope-light);
+  text-align: center;
+}
+
 /* FOOTER */
 
 .footer {

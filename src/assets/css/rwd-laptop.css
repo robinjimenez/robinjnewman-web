@@ -44,10 +44,9 @@
     max-width: 1200px;
   }
 
-  .section {
+  .section:not(.not-found) {
     display: flex;
     flex-direction: row;
-    justify-content: center;
   }
 
   .section__title {
