@@ -12,7 +12,6 @@ import "../css/rwd-mobile.css"
 import "../css/rwd-tablet.css"
 import "../css/rwd-laptop.css"
 
-
 const IndexPage = ({ location, data }) => {
 
   return (

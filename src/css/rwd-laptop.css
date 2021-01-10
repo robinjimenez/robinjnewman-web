@@ -43,6 +43,7 @@
   .section:not(.not-found) {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .section__title {
@@ -60,7 +61,7 @@
     padding: 0 0.5em;
   }
 
-  .hero {
+  .section.hero {
     height: 45vh;
     padding: 20vh 10vw;
     max-width: 100%;

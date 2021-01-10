@@ -5,6 +5,11 @@ import Layout from "../Layout"
 import ProjectCover from "../projects/ProjectCover"
 import ProjectDescription from "../projects/ProjectDescription"
 
+import "../../css/main.css"
+import "../../css/rwd-mobile.css"
+import "../../css/rwd-tablet.css"
+import "../../css/rwd-laptop.css"
+
 export default ({ location, pageContext }) => {
   const {
     Title,
