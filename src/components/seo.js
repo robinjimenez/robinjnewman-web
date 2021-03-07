@@ -44,6 +44,14 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `author`,
+          content: "Robin Jiménez Newman",
+        },
+        {
+          name: `image`,
+          content: "",
+        },
+        {
           property: `og:title`,
           content: title,
         },
