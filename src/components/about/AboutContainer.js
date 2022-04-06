@@ -39,6 +39,7 @@ const AboutContainer = () => {
           skills {
             Description
             Name
+            Position
           }
         }
       }

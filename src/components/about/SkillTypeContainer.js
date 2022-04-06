@@ -12,7 +12,7 @@ const Skill = ({ skill }) => {
 const SkillTypeContainer = ({ skillType }) => {
   return (
     <ul className="skill-type__block">
-        {skillType.skills.map(skill => {
+        {skillType.skills.sort((a,b) => a.Position > b.Position).map(skill => {
           return <Skill key={skill.Name} skill={skill} />
         })}
     </ul>
